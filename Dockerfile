@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 LABEL description="Node container"
 RUN apt-get update
-RUN apt-get install -y git
+RUN apt-get install -y git mc
 RUN apt-get install -y curl
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 RUN echo "#!/usr/bin/env bash" >> /tmp/init_nvm
