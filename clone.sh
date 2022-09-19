@@ -8,6 +8,7 @@ git clone $(perl -e "\$x=\"$1\"; \$x=~s/\/pull\/.+//; print \$x;") .
 git fetch origin $(perl -e "\$x=\"$1\"; \$x=~s/.*?\/(pull\/.+)/\$1\/head:merge_request/; print \$x;") && git checkout merge_request
 
 cp -R . $cwd/repo
+npm install
 
 /bin/bash
 rm -rf $cwd/repo
